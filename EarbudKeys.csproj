@@ -1,0 +1,25 @@
+<!-- Build with .NET 8 SDK on any OS (used here for the Linux cross-check):
+     dotnet build -c Release
+     Output: bin/Release/net48/EarbudKeys.exe
+     The shipped Windows build uses build.bat (in-box csc.exe) instead;
+     this project exists so the code can be compile-checked anywhere.
+     Language is kept at C# 7.3 (source is C# 5 compatible). -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>EarbudKeys</AssemblyName>
+    <RootNamespace>EarbudKeys</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <Authors>glowwan</Authors>
+    <Description>Bluetooth earbud keys: voice typing (Win+H) and Backspace from earbud taps.</Description>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" />
+  </ItemGroup>
+</Project>
